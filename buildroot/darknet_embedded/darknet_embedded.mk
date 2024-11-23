@@ -1,0 +1,13 @@
+DARKNET_EMBEDDED_VERSION = v1.0
+DARKNET_EMBEDDED_SITE = https://github.com/johnosbb/darknet_embedded/archive/refs/tags
+DARKNET_EMBEDDED_SOURCE = $(DARKNET_EMBEDDED_VERSION).tar.gz
+DARKNET_EMBEDDED_LICENSE = MIT
+DARKNET_EMBEDDED_LICENSE_FILES = LICENSE
+DARKNET_EMBEDDED_CONF_OPTS = -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release
+
+$(eval $(cmake-package))
+$(eval $(host-cmake-package))
+
+
+
+

@@ -1,0 +1,8 @@
+config BR2_PACKAGE_DARKNET_EMBEDDED
+	bool "darknet_embedded"
+    help
+      Darknet Embedded is a lightweight fork of the Darknet neural network framework
+      optimized for embedded systems..
+
+	  https://github.com/johnosbb/darknet_embedded.git
+
