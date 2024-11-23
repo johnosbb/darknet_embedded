@@ -4,4 +4,4 @@ It is a slimmed down version of the software geared towards resource constrained
 
 ## Git Management
 
-- Tag a release on the command line: ```git tag -a v1.0 -m "Release version 1.0" ```
+- Tag a release on the command line: ```git tag -a v1.0 -m "Release version 1.0 ```
