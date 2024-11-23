@@ -1,0 +1,1 @@
+rm -rf CMakeCache.txt darknet_cli yolo_console cmake_install.cmake libdarknet.so libdarknet.a Makefile CMakeFiles DarknetConfig.cmake.in
