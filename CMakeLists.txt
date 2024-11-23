@@ -94,7 +94,7 @@ add_executable(yolo_console ${CMAKE_SOURCE_DIR}/src/yolo_console_dll.cpp)
 target_link_libraries(yolo_console darknet)
 
 # Set the output directories for executables
-set_target_properties(darknet PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+set_target_properties(darknet_cli PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 set_target_properties(yolo_console PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 # Set debug flags if DEBUG option is on
@@ -105,12 +105,12 @@ if(DEBUG)
 endif()
 
 # Install targets (optional)
-install(TARGETS darknet yolo_console DESTINATION bin)
+install(TARGETS darknet_cli yolo_console DESTINATION bin)
 
 
 # Install the shared library (if created, e.g., libdarknet.so)
-if(TARGET darknet_shared)
-    install(TARGETS darknet_shared
+if(TARGET darknet)
+    install(TARGETS darknet
             LIBRARY DESTINATION lib
             ARCHIVE DESTINATION lib)
 endif()
