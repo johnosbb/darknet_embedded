@@ -6,7 +6,10 @@ Darknet Embedded is a slimmed down version of the darknet software (forked from 
 
 ![image](https://github.com/user-attachments/assets/e40d842b-38df-492a-8290-d5111e2a1074)
 
+## Buildroot
 
+- ```make darknet_embedded-dirclean```
+- ```make darknet_embedded``
 
 ## Git Management
 
