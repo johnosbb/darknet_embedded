@@ -9,7 +9,7 @@ Darknet Embedded is a slimmed down version of the darknet software (forked from 
 ## Buildroot
 
 - ```make darknet_embedded-dirclean```
-- ```make darknet_embedded``
+- ```make darknet_embedded```
 
 ## Git Management
 
