@@ -1,6 +1,6 @@
-darnet_embedded is a fork of https://github.com/AlexeyAB/darknet
+# Darknet Embedded
 
-It is a slimmed down version of the darknet software (forked from https://github.com/AlexeyAB/darknet) geared towards resource constrained embedded devices. It can be used without dependency on OpenCV and other frameworks which may not be available on constrained devices.
+Darknet Embedded is a slimmed down version of the darknet software (forked from https://github.com/AlexeyAB/darknet) geared towards resource constrained embedded devices. It can be used without dependency on OpenCV and other frameworks which may not be available on constrained devices.
 
 ![image](https://github.com/user-attachments/assets/e40d842b-38df-492a-8290-d5111e2a1074)
 
