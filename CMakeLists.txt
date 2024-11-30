@@ -2,6 +2,18 @@ cmake_minimum_required(VERSION 3.10)
 
 project(Darknet)
 
+# Check for custom compile definitions for uClibc and musl
+if(USE_UCLIBC)
+    message(STATUS "Building with uClibc support")
+    add_definitions(-DUSE_UCLIBC)
+endif()
+
+if(USE_MUSL)
+    message(STATUS "Building with musl support")
+    add_definitions(-DUSE_MUSL)
+endif()
+
+
 # Set C and C++ flags
 set(CMAKE_C_FLAGS "-Wall -Wfatal-errors -Wno-unused-result -Wno-unknown-pragmas -fPIC -rdynamic")
 set(CMAKE_CXX_FLAGS "-std=c++11 -Wall -Wfatal-errors -Wno-unused-result -Wno-unknown-pragmas -fPIC -rdynamic")
