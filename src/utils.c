@@ -18,7 +18,9 @@
 #else
 #include <sys/time.h>
 #include <sys/stat.h>
+#if !defined(USE_UCLIBC) && !defined(USE_MUSL)
 #include <execinfo.h>
+#endif
 #endif
 
 
@@ -337,7 +339,7 @@ void top_k(float *a, int n, int k, int *index)
     }
 }
 
-
+#if !defined(USE_UCLIBC) && !defined(USE_MUSL)
 void log_backtrace()
 {
 #ifndef WIN32
@@ -353,14 +355,21 @@ void log_backtrace()
     }
 
     free(symbols);
+#else
+void print_backtrace() {
+    fprintf(stderr, "Backtrace not supported on this libc.\n");
+}
 #endif
 }
+#endif
 
 void error(const char * const msg, const char * const filename, const char * const funcname, const int line)
 {
     fprintf(stderr, "Darknet error location: %s, %s(), line #%d\n", filename, funcname, line);
     perror(msg);
+    #if !defined(USE_UCLIBC) && !defined(USE_MUSL)
     log_backtrace();
+    #endif
     exit(EXIT_FAILURE);
 }
 
