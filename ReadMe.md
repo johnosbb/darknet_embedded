@@ -4,7 +4,7 @@ Darknet is an open-source neural network framework Written in C and CUDA, optimi
 
 Darknet Embedded is a slimmed down version of the darknet software (forked from https://github.com/AlexeyAB/darknet) geared towards resource constrained embedded devices. It can be used without dependency on GPU support, OpenCV and other frameworks which may not be available on constrained devices. It is also compatible with small foot-print C libraries like uclibc and musl which are specifically designed for embedded systems.
 
-It is primarily intended for educational purposes and has been refactored to use CMake with additional scripts and configuration files that make integration into automated build environments like Buildroot easier. It can be integrated with Buildroot and a number of sample configurations are provided for both libc and uclibc based configurations. It is intended for those who want to experiment with the technology on low cost constrained embedded devices that run embedded Linux.
+It is primarily intended for those who want to experiment with the technology on low cost constrained embedded devices that run embedded and has been refactored to use CMake with additional scripts and configuration files that make integration into automated build environments like Buildroot easier. A buildroot configuration package is provided for libc, uclibc and musl based configurations. 
 
 ![image](https://github.com/user-attachments/assets/e40d842b-38df-492a-8290-d5111e2a1074)
 
